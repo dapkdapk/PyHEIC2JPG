@@ -33,54 +33,54 @@ This script allows you to seamlessly convert multiple HEIC/HEIF files into JPG f
 
 1. Install the required dependencies:
 ```bash
-pip install pillow pillow-heif
+poetry install
 ```
 
 2. Run the Script:
 ```bash
-python main.py <path/to/your/heic/directory>
+poetry heic2jpg <path/to/your/heic/directory>
 ```
 
 ## Usage Examples
 
 ### Basic usage:
 ```bash
-python main.py /path/to/your/heic/directory
+poetry heic2jpg /path/to/your/heic/directory
 ```
 
 ### Set JPG quality (1-100):
 ```bash
-python main.py -q 90 /path/to/your/heic/directory
+poetry heic2jpg -q 90 /path/to/your/heic/directory
 ```
 
 ### Set the number of parallel workers:
 ```bash
-python main.py -w 8 /path/to/your/heic/directory
+poetry heic2jpg -w 8 /path/to/your/heic/directory
 ```
 
 ### Process files recursively in subdirectories:
 ```bash
-python main.py -r /path/to/your/heic/directory
+poetry heic2jpg -r /path/to/your/heic/directory
 ```
 
 ### Resize images during conversion:
 ```bash
-python main.py --resize 1920x1080 /path/to/your/heic/directory
+poetry heic2jpg --resize 1920x1080 /path/to/your/heic/directory
 ```
 
 ### Specify a custom output directory:
 ```bash
-python main.py -o /custom/output/path /path/to/your/heic/directory
+poetry heic2jpg -o /custom/output/path /path/to/your/heic/directory
 ```
 
 ### Delete original HEIC files after conversion:
 ```bash
-python main.py -d /path/to/your/heic/directory
+poetry heic2jpg -d /path/to/your/heic/directory
 ```
 
 ### Combine multiple options:
 ```bash
-python main.py -q 90 -w 8 -r --resize 1920x1080 -o /custom/output/path /path/to/your/heic/directory
+poetry heic2jpg -q 90 -w 8 -r --resize 1920x1080 -o /custom/output/path /path/to/your/heic/directory
 ```
 
 ## Command-Line Options

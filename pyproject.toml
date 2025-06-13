@@ -1,0 +1,28 @@
+[project]
+name = "pyheic2jpg"
+version = "0.1.0"
+description = "This Python script efficiently converts HEIC/HEIF (High-Efficiency Image Format) files to JPG format, featuring parallel processing for faster conversions, enhanced user experience, and automatic preservation of EXIF metadata."
+authors = [
+    {name = "Alex Tsanis",email = "alex@debtman.dev"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pillow (==11.0.0)",
+    "pillow-heif (==0.18.0)",
+    "click (>=8.2.1,<9.0.0)"
+]
+
+[project.scripts]
+heic2jpg = "pyheic2jpg.main:main"
+
+[tool.poetry]
+packages = [{include = "pyheic2jpg"}]
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+isort = "^6.0.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
